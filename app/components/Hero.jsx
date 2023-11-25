@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import { Button } from "./ui/Button";
 import { Download, Send } from "lucide-react";
 
@@ -11,9 +12,11 @@ import {
 
 //Components
 import { DevImg } from "./DevImg";
-import { Badge } from "./Badge";
 import { Socials } from "./Socials";
+
 export const Hero = () => {
+  const cvFilePath = "/hero/Mohamed_Ali_Harroum_French_CV.pdf";
+
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
@@ -37,7 +40,16 @@ export const Hero = () => {
                 </Button>
               </Link>
               <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
+                <a
+                  href={cvFilePath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  <span className="flex items-center">
+                    Download CV <Download size={18} className="ml-2" />
+                  </span>
+                </a>
               </Button>
             </div>
             {/*socials */}
@@ -48,9 +60,10 @@ export const Hero = () => {
           </div>
           {/*image */}
           <div className="hidden xl:flex relative">
+            <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2'></div>
             <DevImg
-              containerStyles="w-[510px] h-[462px] bg-no-repeat relative bg-bottom bg-transparent"
-              imgSrc="/hero/profile-pic.png"
+              containerStyles=" bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom bg-transparent"
+              imgSrc="/hero/dalidalipng.png"
             />
           </div>
         </div>
