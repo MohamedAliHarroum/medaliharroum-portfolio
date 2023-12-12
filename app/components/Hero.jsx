@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { Button } from "./ui/Button";
 import { Download, Send } from "lucide-react";
 
 import {
@@ -13,6 +12,7 @@ import {
 //Components
 import { DevImg } from "./DevImg";
 import { Socials } from "./Socials";
+import {Button} from "@/app/components/ui/button";
 
 export const Hero = () => {
   const cvFilePath = "/hero/Mohamed_Ali_Harroum_French_CV.pdf";

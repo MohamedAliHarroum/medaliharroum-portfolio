@@ -2,8 +2,7 @@
 import{MailIcon,HomeIcon,PhoneIcon} from 'lucide-react';
 
 import React from "react";
-import {Form} from "../components/form";
-
+import {Form} from "@/app/components/Form";
  const Contact = () => {
   return <section className="min-h-screen pt-12 text-lg mb-4 ">
     <div className="container mx-auto ">
