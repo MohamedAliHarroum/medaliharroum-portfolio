@@ -15,7 +15,7 @@ import { Socials } from "./Socials";
 import {Button} from "./ui/button";
 
 export const Hero = () => {
-  const cvFilePath = "/hero/Mohamed_Ali_Harroum_French_CV.pdf";
+  const cvFilePath = "/Mohamed_Ali_Harroum_French_CV.pdf";
 
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
@@ -44,7 +44,6 @@ export const Hero = () => {
                   href={cvFilePath}
                   target="_blank"
                   rel="noopener noreferrer"
-                  download
                 >
                   <span className="flex items-center">
                     Download CV <Download size={18} className="ml-2" />
