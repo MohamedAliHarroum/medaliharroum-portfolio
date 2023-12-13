@@ -8,7 +8,7 @@ import { MobileNav } from "./MobileNav";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
-export default function Header() {
+export const Header = ()  =>{
   const [header, setHeader] = useState(false);
   const pathname = usePathname();
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Header() {
       className={`${
         header
           ? "py-4 bg-white shadow-lg dark:bg-accent"
-          : "py-6 daek:bg-transparent"
+          : "py-6 dark:bg-transparent"
       } sticky top-0 z-30 transition-all ${
         pathname === "/" && "bg-[#fef9f5]"
       }}`}
